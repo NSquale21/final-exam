@@ -7,6 +7,8 @@ import Home from './pages/Home';
 import Books from './pages/Books';
 import Details from './pages/Details';
 import Register from './pages/Register';
+import AddBook from './pages/AddBook';
+import Edit from './pages/Edit';
 import Login from './pages/Login';
 import Admin from './pages/Admin';
 
@@ -22,8 +24,11 @@ const App: React.FC<IAppProps> = () => {
 					<Route exact path="/books/details/:id">
 						<Details />
 					</Route>
+					<Route exact path="/books/edit/:id">
+						<Edit />
+					</Route>
 					<Route exact path="/books/new">
-						<Books />
+						<AddBook />
 					</Route>
 					<Route exact path="/books">
 						<Books />

@@ -9,7 +9,7 @@ import Col from 'react-bootstrap/Col';
 const Template: React.FC<TemplateProps> = props => {
     return (
         <Col md={6}>
-            <Card className="mb-3">
+            <Card className="mb-3 shadow-sm">
                 <Card.Body>
                     <Card.Title>{props.book.title}</Card.Title>
                     <Card.Subtitle>{props.book.author}</Card.Subtitle>

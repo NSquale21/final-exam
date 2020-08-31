@@ -1,17 +1,17 @@
 import * as React from 'react';
-import LoginForm from '../components/LoginForm';
+import EditForm from '../components/EditForm';
 import Row from 'react-bootstrap/Row';
 
-const Login: React.FC<ILoginProps> = () => {
+const Template: React.FC<TemplateProps> = () => {
     return (
         <main>
             <Row className="justify-content-center">
-                <LoginForm />
+                <EditForm />
             </Row>
         </main>
     );
 };
 
-interface ILoginProps {}
+interface TemplateProps {}
 
-export default Login;
+export default Template;

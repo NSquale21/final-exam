@@ -1,17 +1,17 @@
 import * as React from 'react';
-import LoginForm from '../components/LoginForm';
+import AddBookForm from '../components/AddBookForm';
 import Row from 'react-bootstrap/Row';
 
-const Login: React.FC<ILoginProps> = () => {
+const AddBook: React.FC<IAddBookProps> = () => {
     return (
         <main>
             <Row className="justify-content-center">
-                <LoginForm />
+                <AddBookForm />
             </Row>
         </main>
     );
 };
 
-interface ILoginProps {}
+interface IAddBookProps {}
 
-export default Login;
+export default AddBook;

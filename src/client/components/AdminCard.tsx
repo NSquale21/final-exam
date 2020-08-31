@@ -9,20 +9,20 @@ import Col from 'react-bootstrap/Col';
 const Template: React.FC<TemplateProps> = props => {
 
     const history = useHistory();
-    
-    const handleEdit = async (e: React.MouseEvent<HTMLButtonElement>) => {
+
+    const handleDelete = async (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
-        const res = await api(`/api/books/${props.book.id}`);
+        const res = await api(`/api/books/${props.book.id}`, 'DELETE');
         history.push('/books');
     };
     
     return (
         <Col md={7}>
-            <Card className="mb-3">
+            <Card className="mb-3 shadow-sm">
                 <Card.Body>
                     <Card.Title>{props.book.title}</Card.Title>
                     <Card.Subtitle>{props.book.author}</Card.Subtitle>
-                    <Button onClick={handleEdit} variant="outline-primary">Delete</Button>
+                    <Button onClick={handleDelete} variant="outline-primary">Delete</Button>
                     <Link to={`/books/edit/${props.book.id}`} className="btn btn-outline-primary">Edit</Link>
                 </Card.Body>
             </Card>
