@@ -1,14 +1,8 @@
 import { Router } from 'express';
+import * as passport from 'passport';
 
 const router = Router();
 
-router.get('/', async (req, res) => {
-    try {
-        res.json('TEST TOKENS');
-    } catch (error) {
-        console.log(error);
-        res.status(500).json({ msg: 'Uh Oh!', error});
-    }
-});
+router.get('/verify', passport.authenticate('jwt'), async (req, res) => res.sendStatus(200));
 
 export default router;
