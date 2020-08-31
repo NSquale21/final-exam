@@ -5,7 +5,7 @@ export interface IBook {
     author?: string;
     price?: number;
     _created?: Date;
-    name?: string;
+    category?: string;
 }
 
 export interface ICategory {
