@@ -17,6 +17,7 @@ const Books: React.FC<IBooksProps> = () => {
     
     return (
         <main>
+            
             <Row className="justify-content-center">
                 {books.map(book => <BookCard book={book} key={`book-${book.id}`} />)}
             </Row>
