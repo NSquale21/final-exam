@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { IBook } from '../utils/interfaces';
+import type { IBook } from '../utils/interfaces';
 import Badge from 'react-bootstrap/Badge';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';

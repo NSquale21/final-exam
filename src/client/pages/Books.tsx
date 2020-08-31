@@ -13,7 +13,7 @@ const Books: React.FC<IBooksProps> = () => {
             const books = await api('/api/books');
             setBooks(books);
         })();
-    });
+    }, []);
     
     return (
         <main>

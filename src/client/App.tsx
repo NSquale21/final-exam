@@ -2,10 +2,12 @@ import * as React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import NavBar from './components/NavBar';
+import PrivateRoute from './components/PrivateRoute';
 import Home from './pages/Home';
 import Books from './pages/Books';
 import Register from './pages/Register';
 import Login from './pages/Login';
+import Admin from './pages/Admin';
 
 const App: React.FC<IAppProps> = () => {
 	return (
@@ -25,6 +27,9 @@ const App: React.FC<IAppProps> = () => {
 					<Route exact path="/login">
 						<Login />
 					</Route>
+					<PrivateRoute exact path="/admin">
+						<Admin />
+					</PrivateRoute>
 				</Switch>
 			</Container>
 		</BrowserRouter>	
