@@ -1,4 +1,4 @@
-// import type { TUsers } from "../db/models";
+import type { TUsers } from "../db/models";
 import { Request } from 'express';
 
 export interface IPayload {
@@ -8,5 +8,5 @@ export interface IPayload {
 }
 
 export interface ReqUser extends Request {
-    // user: TUsers;
+    user: TUsers;
 }
